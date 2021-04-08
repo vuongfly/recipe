@@ -12,10 +12,6 @@ public class UnitOfMeasure {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String measure;
-
-    @OneToOne
-    private Ingredient ingredient;
-
+    private String description;
 
 }
