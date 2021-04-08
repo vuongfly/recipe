@@ -21,6 +21,9 @@ public class Recipe {
     private Long cookTime;
     private Long serving;
 
+    @Enumerated(EnumType.STRING)
+    private Difficulty difficulty;
+
     @Lob
     private Byte[] image;
 
