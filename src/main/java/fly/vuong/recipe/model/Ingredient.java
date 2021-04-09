@@ -16,10 +16,21 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
 
-    @ManyToOne
-    private Recipe recipe;
-
     @OneToOne(fetch = FetchType.EAGER)
     private UnitOfMeasure unitOfMeasure;
 
+    @ManyToOne
+    private Recipe recipe;
+
+
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure unitOfMeasure, Recipe recipe) {
+    }
+
+    public Ingredient() {
+
+    }
+
+    public void setRecipe(Recipe recipe) {
+        this.recipe = recipe;
+    }
 }

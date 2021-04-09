@@ -3,6 +3,7 @@ package fly.vuong.recipe.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -15,8 +16,8 @@ public class Category {
 
     private String description;
 
-    @ManyToMany(mappedBy = "categories")
-    private Set<Recipe> recipes;
+    @ManyToMany(mappedBy = "categories", fetch = FetchType.EAGER)
+    private Set<Recipe> recipes = new HashSet<>();
 
 
 }

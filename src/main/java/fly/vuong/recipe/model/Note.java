@@ -16,4 +16,8 @@ public class Note {
 
     @Lob
     private String recipeNote;
+
+    public void setRecipe(Recipe recipe) {
+        this.recipe = recipe;
+    }
 }
